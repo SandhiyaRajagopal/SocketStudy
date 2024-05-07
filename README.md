@@ -54,7 +54,7 @@ Socket programming finds applications in various domains, including web developm
 5.	RPC mechanisms: which allow processes to execute code on a remote server, often use socket programming for communication.
 
 ##Client program:
-
+```
 import socket
 from datetime import datetime
 s=socket.socket()
@@ -68,20 +68,19 @@ ack=c.recv(1024).decode()
 if ack:
  print(ack)
 c.close()
-
+```
 ##Server Program:
-
+```
 import socket
 s=socket.socket()
 s.connect(('localhost', 8000))
 print(s.getsockname())  
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
-
+```
 ##Output:
 
-![image](https://github.com/SandhiyaRajagopal/SocketStudy/assets/144870852/3e4d4ce6-ba94-4d06-90b6-3279b6c1cfba)
-
+![image](https://github.com/SandhiyaRajagopal/SocketStudy/assets/144870852/84b3ff03-41a6-4be7-878c-6f8efb44f000)
 
 ## Result:
 Thus the study of Socket Programming Completed Successfully
